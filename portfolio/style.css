@@ -1,0 +1,284 @@
+* {  
+  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+    flex-wrap: wrap;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.h1{
+  font-size: 50px;
+}
+
+footer{
+  background-color: rgb(14, 14, 14);
+  text-align: center;
+  color: gray;
+  padding: 40px;
+  bottom: 0;
+}
+
+header {
+    top: 0;
+    position: sticky;
+    background-color: rgb(14, 14, 14);
+    padding: 10px;
+
+}
+
+span{
+  color: black;
+  background-color: orange;
+  border-radius: 5px;
+  padding-inline: 15px;
+  padding-block: 7px;
+}
+
+.nav-link li{
+    list-style: none;
+    display: inline-block;
+    padding: 0px 15px;
+    font-family: sans-serif;
+}
+
+a{
+  text-decoration: none;
+  font-weight: 550;
+  letter-spacing: 3px;
+  position: relative;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px 10px;
+    margin: 10px, 5%;
+}
+
+.logo{
+    margin-right: auto;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    color: white;
+    letter-spacing: 3px;
+}
+
+a::after{
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  transform: scaleX(0);
+  left: 0;
+  bottom: -1%;
+  background-color: orange;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+
+a:hover::after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+img{
+  filter: drop-shadow(0px 0px 15px  rgb(255, 184, 52));
+  border-radius: 100%;
+  position: relative;
+  left: 250px;
+  bottom: 150px;
+  transform: translateX(0px);
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%{
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.img{
+  display: flex;
+  margin-inline: 30px;
+}
+
+section{
+  position: relative;
+  top: 150px;
+  margin: 50px;
+  height: calc(60vh);
+}
+
+section {
+  transform: translateX(0);
+  animation: slide 1s ease-out;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-15px);
+    opacity: 0;
+  }
+  100% {
+    transform:  translateX(0px);
+    opacity: 1;
+  }
+}
+
+/*projecrts*/
+
+.card{
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    text-align: center;
+    background-color: orange;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 5px 8px orange;
+    margin: 5px;
+    padding: 15px;
+    flex: 1 1 calc(30%-20px);
+    min-width: 250px;
+    
+}
+
+.about{
+  position: relative;
+  top: 0px;
+}
+
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/*resume*/
+
+.hoverb {
+  padding: 40px;
+  position: relative;
+  top: 0;
+}
+
+.hover-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.hover-box {
+  position: relative;
+  width: 300px;
+  height: 250px;
+  background-color: orange;
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hover-box h1 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.letter {
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.4s ease, max-height 0.4s ease;
+  overflow: hidden;
+}
+
+.hover-box:hover .letter {
+  opacity: 1;
+  max-height: 500px; 
+}
+
+/*contact*/
+
+.contact-section {
+  text-align: center;
+  padding: 50px 20px;
+  position: relative;
+  top: 0;
+}
+
+.contact-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: orange;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  font-size: 36px;
+  color: #555;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+}
+
+.social-links .tiktok:hover {
+  color: #000;
+}
+
+.social-links .instagram:hover {
+  color: #e1306c;
+}
+
+.social-links .facebook:hover {
+  color: #1877f2;
+}
+
+.social-links .email:hover {
+  color: #3498db;
+}
+
+.alert-button {
+  padding: 10px 20px;
+  background-color: orange;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  position: relative;
+  font-weight: bold;
+  top: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.alert-button:hover {
+  background-color: rgb(187, 121, 0);
+}
